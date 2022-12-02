@@ -1,0 +1,128 @@
+/* Global styles and variables */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-body: "Inter", sans-serif;
+  --white: #ffffff;
+  --gray100: #e1e8f0;
+  --gray400: #91969d;
+  --green400: #85cc16;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(18, 135, 0, 1) 0%,
+    rgba(27, 209, 60, 1) 49%,
+    rgba(0, 255, 132, 1) 100%
+  );
+  height: 100vh;
+}
+
+body,
+input,
+button {
+  font-family: var(--ff-body);
+  font-size: 1.6rem;
+}
+
+input,
+button {
+  border: none;
+  border-radius: 0.8rem;
+  width: 100%;
+}
+
+button {
+  padding: 0.8rem;
+}
+
+.input-wrapper {
+  margin-bottom: 0.8rem;
+}
+
+.input-wrapper input {
+  background: var(--gray100);
+  padding: 0.2rem 0.8rem;
+}
+
+.input-wrapper input:focus {
+  outline: 1px solid var(--gray400);
+}
+
+/* Form */
+
+.form {
+  background: var(--white);
+  padding: 8rem 4rem 12rem;
+  border-radius: 0.8rem;
+  animation: downToTop 1000ms ease forwards;
+}
+
+.form h1 {
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.form button {
+  background: var(--green400);
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+
+  transition: background 0.2s;
+}
+
+.form button:hover {
+  background: #598b0c;
+}
+
+.form a {
+  color: var(--gray400);
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+@keyframes downToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
+
+@media (min-width: 1024px) {
+  body{
+    font-size: 2.4rem;
+  }
+
+  .form {  
+    width: 48rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  body,
+  input,
+  button {
+    font-size: 6.4rem;
+  }
+
+  .form {
+    width: 144.0rem;
+  }
+}
